@@ -1,7 +1,10 @@
+#= require jquery
 #= require jquery.turbolinks
 #= require jquery_ujs
 #= require jquery-ui
-#= require turbolinks
+#= require underscore
+#= require backbone
+#= require_tree ../../templates
 #= require bxslider
 #= require fancybox
 #= require jquery-fileupload
@@ -10,6 +13,7 @@
 #= require ckeditor/front_config
 #= require nprogress
 #= require nprogress-turbolinks
+#= require turbolinks
 #= require_tree .
 
 

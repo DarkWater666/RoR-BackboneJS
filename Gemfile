@@ -20,6 +20,7 @@ gem 'jbuilder'
 
 #preprocessors
 gem 'sass-rails'
+gem 'backbone-on-rails'
 gem 'stylus'
 gem 'slim-rails'
 gem 'slim'
