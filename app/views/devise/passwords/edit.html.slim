@@ -1,0 +1,20 @@
+.form_auth
+  .but_pass.active_but смена пароля
+  .registration
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put, :class=>'formAdmin'  }) do |f|
+      = devise_error_messages!
+      = f.hidden_field :reset_password_token
+      .field_registration.field_auth
+        .icons_auth
+          i.fa.fa-lock.fa-lg
+        /= f.label :password, 'Пароль', :class=>'youpasswd', data:{icon: 'p'}
+        = f.password_field :password, :class=>'hidden_display'
+        = f.password_field :password, :placeholder=>'новый пароль', :required=>'required', :id=>'passwordsignup',:pattern=>'(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$',:title=>'пароль должен быть длиной минимум 8 символов, содержать хотя бы одну цифру и буквы разных регистров'
+      .field_registration.field_auth
+        .icons_auth
+          i.fa.fa-lock.fa-lg
+        /= f.label :password, 'Пароль', :class=>'youpasswd', data:{icon: 'p'}
+        = f.password_field :password_confirmation, :class=>'hidden_display'
+        = f.password_field :password_confirmation, :placeholder=>'и ещё раз', :required=>'required', :id=>'passwordsignup',:pattern=>'(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$',:title=>'пароль должен быть длиной минимум 8 символов, содержать хотя бы одну цифру и буквы разных регистров'
+      .field_registration.button.but_ok
+        = f.submit 'сменить пароль', :class=>'light_blue_button light_blue_input disabled', :disabled=>'disabled'

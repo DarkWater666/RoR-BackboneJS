@@ -1,0 +1,13 @@
+.form_auth
+  .but_pass.active_but восстановление пароля
+  .registration
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class=>'formAdmin' }) do |f|
+      = devise_error_messages!
+      .field_registration.field_auth
+        .icons_auth
+          i.fa.fa-envelope.fa-lg
+        /= f.label :email, 'Электронная почта', :class=>'youmail', data:{icon: 'e'}
+        = f.password_field :email, :class=>'hidden_display'
+        = f.email_field :email, :required=>'required', :placeholder=>'электронная почта', :id=>'emailsignup',:pattern=>'[^@]+@[^@]+\.[a-zA-Z]{2,6}',:title=>'фомат электронной почты включает название аккаунта, символ @ и домен почтового регистратора'
+      .field_registration.button.but_ok
+        = f.submit 'Выслать инструкции', :class=>'light_blue_button light_blue_input disabled', :disabled=>'disabled'

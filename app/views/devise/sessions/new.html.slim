@@ -1,0 +1,18 @@
+.logincheg
+  .form_auth
+    .but_log.active_but
+      | вход
+    .login
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .field_login.field_auth
+          .icons_auth =icon('user')
+          = f.text_field :login, :class=>'hidden_display'
+          = f.text_field :login, :autofocus => true, :placeholder=>'логин', :required=>'required', :id=>'username',:pattern=>'[A-Za-zА-Яа-яЁё0-9]{5,30}',:title=>'логин должен быть длиной минимум 5 символов'
+        .field_login.field_auth
+          .icons_auth =icon('lock')
+          = f.password_field :password, :class=>'hidden_display'
+          = f.password_field :password, :placeholder=>'пароль', :required=>'required', :id=>'password',:pattern=>'(?=.*\d)(?=.*[a-zA-Zа-яА-Я-_\\@.,<>&*?$!\/#|+=()^%]).{6,}', :title=>'пароль должен быть длиной минимум 6 символов, содержать хотя бы одну цифру и букву'
+        .field_login.keeplogin
+          =f.text_field :remember_me, :as => :hidden, :value => true
+        .field_login.button.but_ok
+          = f.submit 'Войти', :class=>'light_blue_button light_blue_input disabled'

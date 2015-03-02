@@ -1,0 +1,35 @@
+doctype 5
+html
+	head
+		title = content_for?(:title) ? content_for(:title) : 'Testings RoR + Backbone'
+		meta content="#{content_for?(:description) ? content_for(:description) : 'Description'}" name='description'
+		meta content="#{content_for?(:keywords) ? content_for(:keywords) : 'Keywords'}" name='keywords'
+		meta content='DarkCreative Style' name='author'
+		/16x16 favicon
+		link href="/favicon.png" rel="icon" type="image/png"
+		/56X56 favicon
+		link href="/apple-touch-favicon.png" rel="apple-touch-icon"
+		= stylesheet_link_tag 'front/application', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'front/application', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+	/![if lt IE 9]
+		script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"
+	/![if IE]
+		| <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+	body
+		.nprogress
+		#front_main
+			= yield
+
+
+		-if notice || alert || warning || info
+			.cloud
+				-if notice
+					#notice.flash = !(notice.is_a? String) ? notice.join("<br>").html_safe : notice.html_safe
+				-if alert
+					#alert.flash = !(alert.is_a? String) ? alert.join("<br>").html_safe : alert.html_safe
+				-if warning
+					#warning.flash = !(warning.is_a? String) ? warning.join("<br>").html_safe : warning.html_safe
+				-if info
+					#info.flash = !(info.is_a? String) ? info.join("<br>").html_safe : info.html_safe

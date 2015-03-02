@@ -1,0 +1,124 @@
+//$nprogress-color: #29d !default;
+$nprogress-color: #4589b0;
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#nprogress .bar {
+  background: $nprogress-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  z-index: 100000002;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px $nprogress-color, 0 0 5px $nprogress-color;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 100000002;
+  top: 20%;
+  right: 48%;
+}
+
+#nprogress .spinner-icon {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+
+  border: solid 5px transparent;
+  border-top-color: $nprogress-color;
+  border-left-color: $nprogress-color;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+          animation: nprogress-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#page_loader {
+  margin: 50px auto;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  position: relative;
+  bottom: 35px;
+  z-index: 10;
+  display: none;
+}
+
+#page_loader > div {
+  background-color: rgba(236, 236, 236, 0.75);
+  height: 100%;
+  margin: 0 2px;
+  width: 2px;
+  display: inline-block;
+
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+#page_loader .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+#page_loader .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+#page_loader .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+#page_loader .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+       transform: scaleY(1.0);
+       -webkit-transform: scaleY(1.0);
+     }
+}

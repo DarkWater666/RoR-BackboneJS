@@ -1,0 +1,29 @@
+#changeLogin
+  = form_for resource, :as => resource_name, :url => 'users', :html => { :method => :put, :multipart => true, :class=>'admin_form' } do |f|
+    = devise_error_messages!
+    .field
+      = f.label :login, 'логин'
+      = f.text_field :login, :pattern=>'[A-Za-zА-Яа-яЁё0-9]{5,}',:title=>'логин должен быть длиной минимум 5 символов'
+    .field
+      = f.label :email, 'электронная почта'
+      = f.email_field :email, :pattern=>'[^@]+@[^@]+\.[a-zA-Z]{2,6}',:title=>'фомат электронной почты включает название аккаунта, символ @ и домен почтового регистратора'
+
+    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+      .field
+        | Currently waiting confirmation for: #{resource.unconfirmed_email}
+    .show_next.show_hide сменить пароль
+    .field.hide_element
+      = f.label :password, 'новый пароль'
+      = f.password_field :password, :autocomplete => 'off',:pattern=>'(?=.*\d)(?=.*[a-zA-Zа-яА-Я-_\\@.,<>&*?$!\/#|+=()^%]).{6,}', :title=>'пароль должен быть длиной минимум 6 символов, содержать хотя бы одну цифру и букву'
+      = f.label :password_confirmation, 'подтверждение нового пароля'
+      = f.password_field :password_confirmation,:pattern=>'(?=.*\d)(?=.*[a-zA-Zа-яА-Я-_\\@.,<>&*?$!\/#|+=()^%]).{6,}', :title=>'пароль должен быть длиной минимум 6 символов, содержать хотя бы одну цифру и букву'
+    .hide_prev.show_hide скрыть
+    .field
+      = f.label :current_password, 'текущий пароль'
+      i
+        | (необходимо ввести для сохранения)
+      = f.password_field :current_password,:pattern=>'(?=.*\d)(?=.*[a-zA-Zа-яА-Я-_\\@.,<>&*?$!\/#|+=()^%]).{6,}', :title=>'пароль должен быть длиной минимум 6 символов, содержать хотя бы одну цифру и букву'
+    .actions = f.submit 'Сохранить', :class => 'light_blue_button light_blue_input'
+  /.show_next.show_hide что-то совсем не понравилось?
+  /.field.hide_element = link_to 'Удалить мой аккаунт', registration_path(resource_name), :data => { :confirm => 'ты точно хочешь покинуть нас?' }, :method => :delete, :class=>'dark_blue_button oppaoppa'
+  /.hide_prev.show_hide показалось

@@ -1,0 +1,445 @@
+ru:
+  date:
+    abbr_day_names:
+    - Вс
+    - Пн
+    - Вт
+    - Ср
+    - Чт
+    - Пт
+    - Сб
+    abbr_month_names:
+    -
+    - янв.
+    - февр.
+    - марта
+    - апр.
+    - мая
+    - июня
+    - июля
+    - авг.
+    - сент.
+    - окт.
+    - нояб.
+    - дек.
+    day_names:
+    - воскресенье
+    - понедельник
+    - вторник
+    - среда
+    - четверг
+    - пятница
+    - суббота
+    formats:
+      default: ! '%d.%m.%Y'
+      long: ! '%-d %B %Y'
+      short: ! '%-d %b'
+    month_names:
+    -
+    - января
+    - февраля
+    - марта
+    - апреля
+    - мая
+    - июня
+    - июля
+    - августа
+    - сентября
+    - октября
+    - ноября
+    - декабря
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        few: около %{count} часов
+        many: около %{count} часов
+        one: около %{count} часа
+        other: около %{count} часа
+      about_x_months:
+        few: около %{count} месяцев
+        many: около %{count} месяцев
+        one: около %{count} месяца
+        other: около %{count} месяца
+      about_x_years:
+        few: около %{count} лет
+        many: около %{count} лет
+        one: около %{count} года
+        other: около %{count} лет
+      almost_x_years:
+        one: почти 1 год
+        few: почти %{count} года
+        many: почти %{count} лет
+        other: почти %{count} лет
+      half_a_minute: меньше минуты
+      less_than_x_minutes:
+        few: меньше %{count} минут
+        many: меньше %{count} минут
+        one: меньше %{count} минуты
+        other: меньше %{count} минуты
+      less_than_x_seconds:
+        few: меньше %{count} секунд
+        many: меньше %{count} секунд
+        one: меньше %{count} секунды
+        other: меньше %{count} секунды
+      over_x_years:
+        few: больше %{count} лет
+        many: больше %{count} лет
+        one: больше %{count} года
+        other: больше %{count} лет
+      x_days:
+        few: ! '%{count} дня'
+        many: ! '%{count} дней'
+        one: ! '%{count} день'
+        other: ! '%{count} дня'
+      x_minutes:
+        few: ! '%{count} минуты'
+        many: ! '%{count} минут'
+        one: ! '%{count} минуту'
+        other: ! '%{count} минуты'
+      x_months:
+        few: ! '%{count} месяца'
+        many: ! '%{count} месяцев'
+        one: ! '%{count} месяц'
+        other: ! '%{count} месяца'
+      x_seconds:
+        few: ! '%{count} секунды'
+        many: ! '%{count} секунд'
+        one: ! '%{count} секундy'
+        other: ! '%{count} секунды'
+    prompts:
+      day: День
+      hour: Часов
+      minute: Минут
+      month: Месяц
+      second: Секунд
+      year: Год
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: нужно подтвердить
+      blank: не может быть пустым
+      confirmation: 'не совпадает с  %{attribute}'
+      empty: не может быть пустым
+      equal_to: может иметь лишь значение, равное %{count}
+      even: может иметь лишь нечетное значение
+      exclusion: имеет зарезервированное значение
+      greater_than: может иметь значение большее %{count}
+      greater_than_or_equal_to: может иметь значение большее или равное %{count}
+      inclusion: имеет непредусмотренное значение
+      invalid: имеет неверное значение
+      less_than: может иметь значение меньшее чем %{count}
+      less_than_or_equal_to: может иметь значение меньшее или равное %{count}
+      not_a_number: не является числом
+      not_an_integer: не является целым числом
+      odd: может иметь лишь четное значение
+      record_invalid: ! 'Возникли ошибки: %{errors}'
+      taken: уже существует
+      too_long:
+        few: слишком большой длины (не может быть больше чем %{count} символа)
+        many: слишком большой длины (не может быть больше чем %{count} символов)
+        one: слишком большой длины (не может быть больше чем %{count} символ)
+        other: слишком большой длины (не может быть больше чем %{count} символов)
+      too_short:
+        few: недостаточной длины (не может быть меньше %{count} символов)
+        many: недостаточной длины (не может быть меньше %{count} символов)
+        one: недостаточной длины (не может быть меньше %{count} символа)
+        other: недостаточной длины (не может быть меньше %{count} символов)
+      wrong_length:
+        few: неверной длины (может быть длиной ровно %{count} символа)
+        many: неверной длины (может быть длиной ровно %{count} символов)
+        one: неверной длины (может быть длиной ровно %{count} символ)
+        other: неверной длины (может быть длиной ровно %{count} символов)
+      email_verifier:
+        email_not_real: не существует
+        out_of_mail_server: не была создана
+        no_mail_server: находится у регистратора, который не открывал почтовых сервисов
+        failure: не быть проверена
+        exception: не быть проверена, из-за невозможности отправки проверочного письма
+    template:
+      body: ! 'Проблемы возникли со следующими полями:'
+      header:
+        few: ! '%{model}: сохранение не удалось из-за %{count} ошибок'
+        many: ! '%{model}: сохранение не удалось из-за %{count} ошибок'
+        one: ! '%{model}: сохранение не удалось из-за %{count} ошибки'
+        other: ! '%{model}: сохранение не удалось из-за %{count} ошибки'
+  helpers:
+    select:
+      prompt: ! 'Выберите: '
+    submit:
+      create: Создать %{model}
+      submit: Сохранить %{model}
+      update: Сохранить %{model}
+  number:
+    currency:
+      format:
+        delimiter: ! ' '
+        format: ! '%n %u'
+        precision: 2
+        separator: ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: руб.
+    format:
+      delimiter: ! ' '
+      precision: 3
+      separator: ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion:
+            few: миллиардов
+            many: миллиардов
+            one: миллиард
+            other: миллиардов
+          million:
+            few: миллионов
+            many: миллионов
+            one: миллион
+            other: миллионов
+          quadrillion:
+            few: квадриллионов
+            many: квадриллионов
+            one: квадриллион
+            other: квадриллионов
+          thousand:
+            few: тысяч
+            many: тысяч
+            one: тысяча
+            other: тысяч
+          trillion:
+            few: триллионов
+            many: триллионов
+            one: триллион
+            other: триллионов
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            few: байта
+            many: байт
+            one: байт
+            other: байта
+          gb: ГБ
+          kb: КБ
+          mb: МБ
+          tb: ТБ
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' и '
+      two_words_connector: ! ' и '
+      words_connector: ! ', '
+  time:
+    am: утра
+    formats:
+      default: ! '%a, %d %b %Y, %H:%M:%S %z'
+      long: ! '%d %B %Y, %H:%M'
+      short: ! '%d %b, %H:%M'
+    pm: вечера
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors
+      models:
+        user:
+          attributes:
+            wall:
+              wrong_size: ошибочный размер файла для фона (должен быть от 50 Кб до 2 Мб)
+              size_too_small: слишком маленький размер файла для фона (должен быть не меньше 50 Кб)
+              size_too_big: слишком большой размер файла для фона (должен быть не больше 2 Мб)
+            avatar:
+              wrong_size: ошибочный размер файла для аватара (должен быть от 10 Кб до 1 Мб)
+              size_too_small: слишком маленький размер файла для аватара (должен быть не меньше 10 Кб)
+              size_too_big: слишком большой размер файла для аватара (должен быть не больше 1 Мб)
+    models:
+      game: Игра
+      newspapper: Новость
+      user: Пользователь
+      comment: Комментарий
+      review: Отзыв
+      article: Статья
+      umail: Письмо пользователю
+      room: Комната
+
+    attributes:
+      game:
+        title: полное название
+        search: краткое название
+        picture: картинка
+        genre: жанр
+        typer: тип
+        people: колличество игроков
+        logo: логотип
+        desc: анонс
+        description: описание
+        company: разработчик
+        link_company: ссылка
+        release_ru: дата выхода в России
+        release_eu: дата выхода в Европе
+        release_us: дата выхода в США
+        release_ko: дата выхода в Корее
+        ru_link: ссылка на сайт в России
+        eu_link: ссылка на сайт в Европе
+        us_link: ссылка на сайт в США
+        ko_link: ссылка на сайт в Корее
+        background: фон
+        allow: одобрение
+      room:
+        title: Название
+        search: Краткое название
+        url_name: Путь ссылки
+        logo: Логотип
+        backs: Фоновое изображение
+        game_id: Игра
+        description: Описание
+      newspapper:
+        title: Заголовок
+        text: Текст
+        link: Ссылка
+      umail:
+        title: Тема
+        text: Текст
+      review:
+        plus: Плюсы
+        minus: Минусы
+        general: Общее впечатление
+        allow: Публикация
+      article:
+        title: Заголовок
+        anons: Анонс
+        text: Текст
+        picture: Картинка
+        allow: Публикация
+        typer: Тип
+      user:
+        email: электронная почта
+        name: имя
+        login: логин
+        password: пароль
+        address: адрес
+        current_password: текущий пароль
+        phone: телефон
+        wall: фон
+        avatar: аватар
+      good:
+        Cost: цена
+      comment:
+        plus: достоинства
+        minus: недостатки
+        text: общее впечатление
+        author: подпись
+      home:
+        answer: проверка на робота
+        name: имя
+        from: электронная почта
+        title: тема письма
+        text: текст письма
+
+  devise:
+    errors:
+      messages:
+        not_saved: не сохранено
+    sessions:
+      admin_user:
+        signed_in: Вход в административную панель выполнен успешно.
+      user:
+        signed_out: До свидания! Возвращайтесь скорее.
+        signed_in: Вход выполнен успешно. Добро пожаловать!
+    registrations:
+      user:
+        signed_up: Поздравляем, Вы успешно зарегистрировались.
+        destroyed: Прескорбно, Вы удалили свой аккаунт.
+    failure:
+      user:
+        not_found_in_database: Такой учётной записи не нашлось.
+
+  ransack:
+    search: "Поиск"
+    predicate: "основное"
+    and: "и"
+    or: "или"
+    any: "любое"
+    all: "все"
+    combinator: "комбинатор"
+    attribute: "аттрибут"
+    value: "значение"
+    condition: "состояние"
+    sort: "сортировать"
+    asc: "возрастанию"
+    desc: "убыванию"
+    predicates:
+      eq: "равно"
+      eq_any: "не равно"
+      eq_all: "все равно"
+      not_eq: "не похожи на"
+      not_eq_any: "не равно ни одному"
+      not_eq_all: "не равно ни счем"
+      matches: "совпадения"
+      matches_any: "соответствует любому"
+      matches_all: "соответствует всем"
+      does_not_match: "не соответствует"
+      does_not_match_any: "не соответствует ни одному"
+      does_not_match_all: "не соответствует всем"
+      lt: "меньше"
+      lt_any: "меньше, чем любой"
+      lt_all: "меньше всех"
+      lteq: "меньше или равно"
+      lteq_any: "меньше или равно любому"
+      lteq_all: "меньше или равно для всех"
+      gt: "больше чем"
+      gt_any: "больше, чем любой"
+      gt_all: "больше всех"
+      gteq: "больше или равно"
+      gteq_any: "больше или равно любому"
+      gteq_all: "больше или равно для всех"
+      in: "в"
+      in_any: "в любом"
+      in_all: "во всем"
+      not_in: "не"
+      not_in_any: "ни в коем"
+      not_in_all: "не во всем"
+      cont: "содержит"
+      cont_any: "содержит любые"
+      cont_all: "содержит все"
+      not_cont: "не содержит"
+      not_cont_any: "не содержит"
+      not_cont_all: "не содержит всех"
+      start: "начинается с"
+      start_any: "начинается с любого"
+      start_all: "все начинается с"
+      not_start: "не начинается с"
+      not_start_any: "не запускается с любого"
+      not_start_all: "не запускается со всеми"
+      end: "заканчивается"
+      end_any: "заканчивается на любом"
+      end_all: "заканчивается на все"
+      not_end: "не заканчивается"
+      not_end_any: "не заканчивается с любым"
+      not_end_all: "не заканчивается со всеми"
+      'true': "верно"
+      'false': "ложно"
+      present: "присутствует"
+      blank: "пустой"
+      'null': "является недействительным"
+      not_null: "не является нулевой"
