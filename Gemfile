@@ -27,7 +27,7 @@ gem 'slim'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'therubyracer', platforms: :ruby
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 gem 'formtastic'
 
 #authorization
@@ -51,6 +51,7 @@ gem 'russian_obscenity'
 
 
 #other
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 gem 'nprogress-rails'
 gem 'friendly_id'
 gem 'sxgeo'

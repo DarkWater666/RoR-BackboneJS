@@ -1,2 +1,8 @@
+= link_to 'inner', registrations_fancy_path, class: 'dark_blue_button registrations_button hidden', 'data-no-turbolink' => true, remote: true
+coffee:
+	if window.location.hash == '#admin/login'
+		$('.registrations_button').click()
+
 h1 Home#index
 p Find me in app/views/home/index.html.slim
+= user_signed_in? ? current_user.has_role?(:super_admin) : false

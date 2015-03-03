@@ -9,7 +9,7 @@ class Ability
     current_user ||= User.new # guest user
 
 
-    if current_user.has_role?(:admin)
+    if current_user.has_role?(:super_admin)
       super_admin
     elsif current_user.has_role?(:admin)
       admin
@@ -22,7 +22,8 @@ class Ability
     elsif current_user.has_role?(:banned)
       banned
     else
-      can :read, :all
+      can :manage, :Home
+      cannot :read, :Admin
     end
 
   end
@@ -51,7 +52,7 @@ class Ability
     end
 
     def banned
-      can :read, :all
+      can :manage, :Home
     end
 
 end

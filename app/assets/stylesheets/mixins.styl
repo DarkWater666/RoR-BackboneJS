@@ -22,11 +22,12 @@ article, aside, details, figcaption, figure,
 footer, header, menu, nav, section
   display block
 
+font = 300 16px "Open Sans", sans-serif
+
 body
-  line-height 1
-  min-width 1000px
-  width 100%
-  font-size 16px
+	font font
+	min-width 1000px
+	width 100%
 
 h1
 	font-size 2em
@@ -211,3 +212,7 @@ error = #ef5c5e
 notice = #9fb375
 warning = #cba71f
 info = #5496ba
+
+stm_red = #c72825
+light_red = #f14f4d
+lighten_red = lighten(light_red, 20%)
